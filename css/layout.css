@@ -1,0 +1,45 @@
+html, body { 
+  height: 100%; width: 100%; margin: 0; 
+} 
+body {
+  background-color:white; overflow:hidden;
+  font-family: "Arial"; 
+}
+#header {
+  background-image: url(../img/banner.jpg); background-repeat: repeat-x;
+  color:white; font-size:18pt; 
+  text-align:left; height:30px;
+}
+#leftPane{
+  background-color: #000000;
+  color: #ffffff;
+  display: block;
+  height: 100%;
+  opacity: 0.8;
+  position: absolute;
+  right: 0;
+  text-align: left;
+  top: 0;
+  width: 15%;
+}
+#map {
+  background-color: #000000;
+  opacity: 0.8;
+}
+#footer {
+  background-color:#d9938d;
+  color:#3f3f3f;
+  font-size:10pt;
+  text-align:center;
+  height:40px;
+}
+.dijitTabInnerDiv{
+  background-color:#ecefe4;
+}
+/*.myIcon {
+  background-image: url(../images/GuessTheCity.png);
+  background-repeat: no-repeat;
+  width: 160px;
+  height: 30px;
+  text-align: center;
+}*/

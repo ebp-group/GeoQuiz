@@ -1,0 +1,1537 @@
+[
+	{
+		"cityname": "Mexiko-Stadt",
+		"lon": "-99.145555555556",
+		"lat": "19.419444444444"
+	},
+	{
+		"cityname": "Shanghai",
+		"lon": "121.466667",
+		"lat": "31.233333"
+	},
+	{
+		"cityname": "Peking",
+		"lon": "116.388338",
+		"lat": "39.928887"
+	},
+	{
+		"cityname": "Istanbul",
+		"lon": "28.960277777778",
+		"lat": "41.01"
+	},
+	{
+		"cityname": "Karatschi",
+		"lon": "67.01",
+		"lat": "24.86"
+	},
+	{
+		"cityname": "Mumbai",
+		"lon": "72.833333333333",
+		"lat": "18.966666666667"
+	},
+	{
+		"cityname": "Moskau",
+		"lon": "37.616666666667",
+		"lat": "55.75"
+	},
+	{
+		"cityname": "Delhi",
+		"lon": "77.216666666667",
+		"lat": "28.666666666667"
+	},
+	{
+		"cityname": "São Paulo",
+		"lon": "-46.616667",
+		"lat": "-23.5"
+	},
+	{
+		"cityname": "Seoul",
+		"lon": "126.978135",
+		"lat": "37.565654"
+	},
+	{
+		"cityname": "Jakarta",
+		"lon": "106.82861111111",
+		"lat": "-6.175"
+	},
+	{
+		"cityname": "Lagos",
+		"lon": "3.3958333333333",
+		"lat": "6.4530555555556"
+	},
+	{
+		"cityname": "Tokio",
+		"lon": "139.774444",
+		"lat": "35.683889"
+	},
+	{
+		"cityname": "Shenzhen",
+		"lon": "114.1",
+		"lat": "22.55"
+	},
+	{
+		"cityname": "New York",
+		"lon": "-74.005833333333",
+		"lat": "40.712777777778"
+	},
+	{
+		"cityname": "London",
+		"lon": "-0.11832",
+		"lat": "51.50939"
+	},
+	{
+		"cityname": "Kinshasa",
+		"lon": "15.313888888889",
+		"lat": "-4.3316666666667"
+	},
+	{
+		"cityname": "Teheran",
+		"lon": "51.416666666667",
+		"lat": "35.7"
+	},
+	{
+		"cityname": "Lima",
+		"lon": "-77.018611",
+		"lat": "-12.035"
+	},
+	{
+		"cityname": "Kairo",
+		"lon": "31.239444444444",
+		"lat": "30.056111111111"
+	},
+	{
+		"cityname": "Bangkok",
+		"lon": "100.516667",
+		"lat": "13.75"
+	},
+	{
+		"cityname": "Lahore",
+		"lon": "74.343611111111",
+		"lat": "31.549722222222"
+	},
+	{
+		"cityname": "Hongkong",
+		"lon": "114.16666666667",
+		"lat": "22.3"
+	},
+	{
+		"cityname": "Dhaka",
+		"lon": "90.394722222222",
+		"lat": "23.740277777778"
+	},
+	{
+		"cityname": "Bogotá",
+		"lon": "-74.080833",
+		"lat": "4.598889"
+	},
+	{
+		"cityname": "Rio de Janeiro",
+		"lon": "-43.196389",
+		"lat": "-22.908333"
+	},
+	{
+		"cityname": "Bagdad",
+		"lon": "44.383333333333",
+		"lat": "33.333333333333"
+	},
+	{
+		"cityname": "Bengaluru",
+		"lon": "77.616666666667",
+		"lat": "12.95"
+	},
+	{
+		"cityname": "Ho-Chi-Minh-Stadt",
+		"lon": "106.66666666667",
+		"lat": "10.75"
+	},
+	{
+		"cityname": "Sankt Petersburg",
+		"lon": "30.266666666667",
+		"lat": "59.933333333333"
+	},
+	{
+		"cityname": "Santiago de Chile",
+		"lon": "-70.666666666667",
+		"lat": "-33.45"
+	},
+	{
+		"cityname": "Ankara",
+		"lon": "32.85",
+		"lat": "39.916666666667"
+	},
+	{
+		"cityname": "Kolkata",
+		"lon": "88.366666666667",
+		"lat": "22.566666666667"
+	},
+	{
+		"cityname": "Rangun",
+		"lon": "96.15",
+		"lat": "16.783333"
+	},
+	{
+		"cityname": "Chennai",
+		"lon": "80.283333333333",
+		"lat": "13.083333333333"
+	},
+	{
+		"cityname": "Wuhan",
+		"lon": "114.27916666667",
+		"lat": "30.5725"
+	},
+	{
+		"cityname": "Riad",
+		"lon": "46.71",
+		"lat": "24.65"
+	},
+	{
+		"cityname": "Chongqing",
+		"lon": "106.506944",
+		"lat": "29.55"
+	},
+	{
+		"cityname": "Chengdu",
+		"lon": "104.066667",
+		"lat": "30.663611"
+	},
+	{
+		"cityname": "Xi'an",
+		"lon": "108.941944",
+		"lat": "34.268333"
+	},
+	{
+		"cityname": "Los Angeles",
+		"lon": "-118.24361111111",
+		"lat": "34.052222222222"
+	},
+	{
+		"cityname": "Ahmedabad",
+		"lon": "72.591666666667",
+		"lat": "22.975"
+	},
+	{
+		"cityname": "Alexandria",
+		"lon": "29.927661111111",
+		"lat": "31.2135"
+	},
+	{
+		"cityname": "Sydney",
+		"lon": "151.2",
+		"lat": "-33.85"
+	},
+	{
+		"cityname": "Tianjin",
+		"lon": "117.183333",
+		"lat": "39.133333"
+	},
+	{
+		"cityname": "Abidjan",
+		"lon": "-4.0333333333333",
+		"lat": "5.3333333333333"
+	},
+	{
+		"cityname": "Busan",
+		"lon": "129.05666666667",
+		"lat": "35.150833333333"
+	},
+	{
+		"cityname": "Hyderabad",
+		"lon": "78.466666666667",
+		"lat": "17.366666666667"
+	},
+	{
+		"cityname": "Kano",
+		"lon": "8.5166666666667",
+		"lat": "11.983333333333"
+	},
+	{
+		"cityname": "Singapur",
+		"lon": "103.83333333333",
+		"lat": "1.2833333333333"
+	},
+	{
+		"cityname": "Yokohama",
+		"lon": "139.63805555556",
+		"lat": "35.443611111111"
+	},
+	{
+		"cityname": "Ibadan",
+		"lon": "3.8833333333333",
+		"lat": "7.3833333333333"
+	},
+	{
+		"cityname": "Berlin",
+		"lon": "13.408055555556",
+		"lat": "52.518611111111"
+	},
+	{
+		"cityname": "Shenyang",
+		"lon": "123.448056",
+		"lat": "41.795556"
+	},
+	{
+		"cityname": "Melbourne",
+		"lon": "144.95",
+		"lat": "-37.8"
+	},
+	{
+		"cityname": "Durban",
+		"lon": "31.016666666667",
+		"lat": "-29.85"
+	},
+	{
+		"cityname": "Harbin",
+		"lon": "126.633333",
+		"lat": "45.75"
+	},
+	{
+		"cityname": "Johannesburg",
+		"lon": "28.066666666667",
+		"lat": "-26.2"
+	},
+	{
+		"cityname": "Madrid",
+		"lon": "-3.7038888888889",
+		"lat": "40.4125"
+	},
+	{
+		"cityname": "Surat",
+		"lon": "72.828611111111",
+		"lat": "21.194166666667"
+	},
+	{
+		"cityname": "Pune",
+		"lon": "73.847777777778",
+		"lat": "18.523611111111"
+	},
+	{
+		"cityname": "Guangzhou",
+		"lon": "113.258975",
+		"lat": "23.128797"
+	},
+	{
+		"cityname": "Nanjing",
+		"lon": "118.796878",
+		"lat": "32.060256"
+	},
+	{
+		"cityname": "Kanpur",
+		"lon": "80.331111111111",
+		"lat": "26.4725"
+	},
+	{
+		"cityname": "Omdurman",
+		"lon": "32.48",
+		"lat": "15.65"
+	},
+	{
+		"cityname": "Casablanca",
+		"lon": "-7.6111222222222",
+		"lat": "33.586880555556"
+	},
+	{
+		"cityname": "Jaipur",
+		"lon": "75.823611111111",
+		"lat": "26.926111111111"
+	},
+	{
+		"cityname": "Pjöngjang",
+		"lon": "125.73",
+		"lat": "39.03"
+	},
+	{
+		"cityname": "Chicago",
+		"lon": "-87.627777777778",
+		"lat": "41.881944444444"
+	},
+	{
+		"cityname": "Addis Abeba",
+		"lon": "38.758333333333",
+		"lat": "9.0166666666667"
+	},
+	{
+		"cityname": "Athen",
+		"lon": "23.727777777778",
+		"lat": "37.977777777778"
+	},
+	{
+		"cityname": "Dschidda",
+		"lon": "39.17",
+		"lat": "21.54"
+	},
+	{
+		"cityname": "Luanda",
+		"lon": "13.25",
+		"lat": "-8.8333333333333"
+	},
+	{
+		"cityname": "Nairobi",
+		"lon": "36.816666666667",
+		"lat": "-1.2833333333333"
+	},
+	{
+		"cityname": "Buenos Aires",
+		"lon": "-58.381944444444",
+		"lat": "-34.599722222222"
+	},
+	{
+		"cityname": "Taiyuan",
+		"lon": "112.56027777778",
+		"lat": "37.869444444444"
+	},
+	{
+		"cityname": "Salvador da Bahia",
+		"lon": "-38.516666666667",
+		"lat": "-12.983055555556"
+	},
+	{
+		"cityname": "Daressalam",
+		"lon": "39.283888888889",
+		"lat": "-6.8166666666667"
+	},
+	{
+		"cityname": "Kiew",
+		"lon": "30.5",
+		"lat": "50.45"
+	},
+	{
+		"cityname": "Ōsaka",
+		"lon": "135.50215",
+		"lat": "34.693830555556"
+	},
+	{
+		"cityname": "Taipeh",
+		"lon": "121.53333333333",
+		"lat": "25.033333333333"
+	},
+	{
+		"cityname": "Lakhnau",
+		"lon": "80.915833333333",
+		"lat": "26.860555555556"
+	},
+	{
+		"cityname": "Faisalabad",
+		"lon": "73.088611111111",
+		"lat": "31.410555555556"
+	},
+	{
+		"cityname": "Incheon",
+		"lon": "126.64861111111",
+		"lat": "37.463888888889"
+	},
+	{
+		"cityname": "Daegu",
+		"lon": "128.58083333333",
+		"lat": "35.863611111111"
+	},
+	{
+		"cityname": "Izmir",
+		"lon": "27.15",
+		"lat": "38.416666666667"
+	},
+	{
+		"cityname": "Rom",
+		"lon": "12.483333333333",
+		"lat": "41.883333333333"
+	},
+	{
+		"cityname": "Changchun",
+		"lon": "125.2",
+		"lat": "43.9"
+	},
+	{
+		"cityname": "Toronto",
+		"lon": "-79.383087",
+		"lat": "43.66135"
+	},
+	{
+		"cityname": "Quezon City",
+		"lon": "121.06666666667",
+		"lat": "14.65"
+	},
+	{
+		"cityname": "Gizeh",
+		"lon": "31.1325",
+		"lat": "29.9775"
+	},
+	{
+		"cityname": "Kabul",
+		"lon": "69.166666666667",
+		"lat": "34.533333333333"
+	},
+	{
+		"cityname": "Sana'a",
+		"lon": "44.206388888889",
+		"lat": "15.348333333333"
+	},
+	{
+		"cityname": "Tunis",
+		"lon": "10.18",
+		"lat": "36.800833333333"
+	},
+	{
+		"cityname": "Kapstadt",
+		"lon": "18.416689",
+		"lat": "-33.922667"
+	},
+	{
+		"cityname": "Belo Horizonte",
+		"lon": "-43.933333",
+		"lat": "-19.916667"
+	},
+	{
+		"cityname": "Surabaya",
+		"lon": "112.733333",
+		"lat": "-7.266667"
+	},
+	{
+		"cityname": "Nagpur",
+		"lon": "79.083055555556",
+		"lat": "21.153888888889"
+	},
+	{
+		"cityname": "Fortaleza",
+		"lon": "-38.588888888889",
+		"lat": "-3.7813888888889"
+	},
+	{
+		"cityname": "Maschhad",
+		"lon": "59.606388888889",
+		"lat": "36.2975"
+	},
+	{
+		"cityname": "Cali",
+		"lon": "-76.528333",
+		"lat": "3.457222"
+	},
+	{
+		"cityname": "Santo Domingo",
+		"lon": "-69.893333333333",
+		"lat": "18.476388888889"
+	},
+	{
+		"cityname": "Nagoya",
+		"lon": "136.90638888889",
+		"lat": "35.181388888889"
+	},
+	{
+		"cityname": "Houston",
+		"lon": "-95.383055555556",
+		"lat": "29.762777777778"
+	},
+	{
+		"cityname": "Havanna",
+		"lon": "-82.386388888889",
+		"lat": "23.1225"
+	},
+	{
+		"cityname": "Paris",
+		"lon": "2.3516666666667",
+		"lat": "48.856666666667"
+	},
+	{
+		"cityname": "Guayaquil",
+		"lon": "-79.887222222222",
+		"lat": "-2.1902777777778"
+	},
+	{
+		"cityname": "Chittagong",
+		"lon": "91.815277777778",
+		"lat": "22.321666666667"
+	},
+	{
+		"cityname": "Khartum",
+		"lon": "32.52",
+		"lat": "15.58"
+	},
+	{
+		"cityname": "Changsha",
+		"lon": "112.97222222222",
+		"lat": "28.196111111111"
+	},
+	{
+		"cityname": "Jinan",
+		"lon": "117.001389",
+		"lat": "36.664722"
+	},
+	{
+		"cityname": "Mosul",
+		"lon": "43.149",
+		"lat": "36.343"
+	},
+	{
+		"cityname": "Basra",
+		"lon": "47.816666666667",
+		"lat": "30.5"
+	},
+	{
+		"cityname": "Zhengzhou",
+		"lon": "113.64194444444",
+		"lat": "34.760277777778"
+	},
+	{
+		"cityname": "Dakar",
+		"lon": "-17.441666666667",
+		"lat": "14.681111111111"
+	},
+	{
+		"cityname": "Shijiazhuang",
+		"lon": "114.49833333333",
+		"lat": "38.043611111111"
+	},
+	{
+		"cityname": "Taschkent",
+		"lon": "69.3",
+		"lat": "41.333333333333"
+	},
+	{
+		"cityname": "Indore",
+		"lon": "75.833333333333",
+		"lat": "22.716666666667"
+	},
+	{
+		"cityname": "Accra",
+		"lon": "-0.21666666666667",
+		"lat": "5.55"
+	},
+	{
+		"cityname": "Medellín",
+		"lon": "-75.5822",
+		"lat": "6.24574"
+	},
+	{
+		"cityname": "Maracaibo",
+		"lon": "-71.633333333333",
+		"lat": "10.633333333333"
+	},
+	{
+		"cityname": "Yaoundé",
+		"lon": "11.516666666667",
+		"lat": "3.8666666666667"
+	},
+	{
+		"cityname": "Douala",
+		"lon": "9.7",
+		"lat": "4.05"
+	},
+	{
+		"cityname": "Jilin",
+		"lon": "126.573",
+		"lat": "43.867"
+	},
+	{
+		"cityname": "Sapporo",
+		"lon": "141.35416666667",
+		"lat": "43.061944444444"
+	},
+	{
+		"cityname": "Hangzhou",
+		"lon": "120.17694444444",
+		"lat": "30.273055555556"
+	},
+	{
+		"cityname": "Bukarest",
+		"lon": "26.1",
+		"lat": "44.433333333333"
+	},
+	{
+		"cityname": "Nanchang",
+		"lon": "115.88722222222",
+		"lat": "28.684166666667"
+	},
+	{
+		"cityname": "Caracas",
+		"lon": "-66.933333333333",
+		"lat": "10.5"
+	},
+	{
+		"cityname": "Ecatepec de Morelos",
+		"lon": "-98.580555555556",
+		"lat": "19.770833333333"
+	},
+	{
+		"cityname": "Rawalpindi",
+		"lon": "73.033333333333",
+		"lat": "33.6"
+	},
+	{
+		"cityname": "Hamburg",
+		"lon": "9.993333",
+		"lat": "53.550556"
+	},
+	{
+		"cityname": "Medan",
+		"lon": "98.676944444444",
+		"lat": "3.5883333333333"
+	},
+	{
+		"cityname": "Minsk",
+		"lon": "27.55",
+		"lat": "53.9"
+	},
+	{
+		"cityname": "Patna",
+		"lon": "85.128333333333",
+		"lat": "25.6125"
+	},
+	{
+		"cityname": "Budapest",
+		"lon": "19.05",
+		"lat": "47.5"
+	},
+	{
+		"cityname": "Curitiba",
+		"lon": "-49.271741666667",
+		"lat": "-25.429755555556"
+	},
+	{
+		"cityname": "Warschau",
+		"lon": "21.033333333333",
+		"lat": "52.216666666667"
+	},
+	{
+		"cityname": "Wien",
+		"lon": "16.373063840833",
+		"lat": "48.208330230278"
+	},
+	{
+		"cityname": "Soweto",
+		"lon": "27.865911111111",
+		"lat": "-26.266072222222"
+	},
+	{
+		"cityname": "Bhopal",
+		"lon": "77.415833333333",
+		"lat": "23.2475"
+	},
+	{
+		"cityname": "Brisbane",
+		"lon": "153.03333333333",
+		"lat": "-27.466666666667"
+	},
+	{
+		"cityname": "Bandung",
+		"lon": "107.6",
+		"lat": "-6.9166666666667"
+	},
+	{
+		"cityname": "Qingdao",
+		"lon": "120.34138888889",
+		"lat": "36.086666666667"
+	},
+	{
+		"cityname": "Guadalajara",
+		"lon": "-103.351944",
+		"lat": "20.666111"
+	},
+	{
+		"cityname": "al-Chartum Bahri",
+		"lon": "32.52",
+		"lat": "15.640555555556"
+	},
+	{
+		"cityname": "Aleppo",
+		"lon": "37.15",
+		"lat": "36.2"
+	},
+	{
+		"cityname": "Ludhiana",
+		"lon": "75.854722222222",
+		"lat": "30.902222222222"
+	},
+	{
+		"cityname": "Rabat",
+		"lon": "-6.8361111111111",
+		"lat": "34.025277777778"
+	},
+	{
+		"cityname": "Montreal",
+		"lon": "-73.5626",
+		"lat": "45.5077"
+	},
+	{
+		"cityname": "Bekasi",
+		"lon": "106.99277777778",
+		"lat": "-6.2394444444444"
+	},
+	{
+		"cityname": "Pretoria",
+		"lon": "28.243888888889",
+		"lat": "-25.725555555556"
+	},
+	{
+		"cityname": "Barcelona",
+		"lon": "2.1666666666667",
+		"lat": "41.4"
+	},
+	{
+		"cityname": "Thane",
+		"lon": "72.975833333333",
+		"lat": "19.195"
+	},
+	{
+		"cityname": "Manaus",
+		"lon": "-60.021386",
+		"lat": "-3.129167"
+	},
+	{
+		"cityname": "Tangshan",
+		"lon": "118.18333333333",
+		"lat": "39.633333333333"
+	},
+	{
+		"cityname": "Kaduna",
+		"lon": "7.4333333333333",
+		"lat": "10.516666666667"
+	},
+	{
+		"cityname": "Damaskus",
+		"lon": "36.309166666667",
+		"lat": "33.509722222222"
+	},
+	{
+		"cityname": "Manila",
+		"lon": "121",
+		"lat": "14.583333333333"
+	},
+	{
+		"cityname": "Phoenix",
+		"lon": "-112.07308333333",
+		"lat": "33.448083333333"
+	},
+	{
+		"cityname": "Isfahan",
+		"lon": "51.676666666667",
+		"lat": "32.6575"
+	},
+	{
+		"cityname": "Harare",
+		"lon": "31.05",
+		"lat": "-17.825"
+	},
+	{
+		"cityname": "Kōbe",
+		"lon": "135.19555555556",
+		"lat": "34.690277777778"
+	},
+	{
+		"cityname": "Agra",
+		"lon": "78.02",
+		"lat": "27.18"
+	},
+	{
+		"cityname": "Algier",
+		"lon": "3.05",
+		"lat": "36.766666666667"
+	},
+	{
+		"cityname": "Quito",
+		"lon": "-78.509722222222",
+		"lat": "-0.21861111111111"
+	},
+	{
+		"cityname": "Kaohsiung",
+		"lon": "120.3",
+		"lat": "22.616666666667"
+	},
+	{
+		"cityname": "Ürümqi",
+		"lon": "87.608889",
+		"lat": "43.795833"
+	},
+	{
+		"cityname": "Recife",
+		"lon": "-34.891111111111",
+		"lat": "-8.0555555555556"
+	},
+	{
+		"cityname": "Daejeon",
+		"lon": "127.40916666667",
+		"lat": "36.341666666667"
+	},
+	{
+		"cityname": "Kyōto",
+		"lon": "135.76805555556",
+		"lat": "35.011666666667"
+	},
+	{
+		"cityname": "Multan",
+		"lon": "71.46",
+		"lat": "30.2"
+	},
+	{
+		"cityname": "Kumasi",
+		"lon": "-1.6166666666667",
+		"lat": "6.6666666666667"
+	},
+	{
+		"cityname": "Philadelphia",
+		"lon": "-75.163888888889",
+		"lat": "39.952222222222"
+	},
+	{
+		"cityname": "Charkiw",
+		"lon": "36.25",
+		"lat": "50"
+	},
+	{
+		"cityname": "Vadodara",
+		"lon": "73.206111111111",
+		"lat": "22.299444444444"
+	},
+	{
+		"cityname": "Kuala Lumpur",
+		"lon": "101.7",
+		"lat": "3.133333"
+	},
+	{
+		"cityname": "Pimpri-Chinchwad",
+		"lon": "73.793888888889",
+		"lat": "18.618888888889"
+	},
+	{
+		"cityname": "Karadsch",
+		"lon": "50.966666666667",
+		"lat": "35.816666666667"
+	},
+	{
+		"cityname": "Caloocan",
+		"lon": "120.96666666667",
+		"lat": "14.65"
+	},
+	{
+		"cityname": "Tangerang",
+		"lon": "106.60305555556",
+		"lat": "-6.1802777777778"
+	},
+	{
+		"cityname": "Hanoi",
+		"lon": "105.85",
+		"lat": "21.033333333333"
+	},
+	{
+		"cityname": "Bursa",
+		"lon": "29.066666666667",
+		"lat": "40.186111111111"
+	},
+	{
+		"cityname": "Täbris",
+		"lon": "46.283333333333",
+		"lat": "38.083333333333"
+	},
+	{
+		"cityname": "Gujranwala",
+		"lon": "74.183333333333",
+		"lat": "32.25"
+	},
+	{
+		"cityname": "Nowosibirsk",
+		"lon": "82.916666666667",
+		"lat": "55.033333333333"
+	},
+	{
+		"cityname": "Lanzhou",
+		"lon": "103.78333333333",
+		"lat": "36.05"
+	},
+	{
+		"cityname": "Hyderabad",
+		"lon": "68.368333333333",
+		"lat": "25.379166666667"
+	},
+	{
+		"cityname": "Gwangju",
+		"lon": "126.90138888889",
+		"lat": "35.156388888889"
+	},
+	{
+		"cityname": "Faridabad",
+		"lon": "77.3",
+		"lat": "28.38"
+	},
+	{
+		"cityname": "Belém",
+		"lon": "-48.483333",
+		"lat": "-1.466667"
+	},
+	{
+		"cityname": "Ciudad Juárez",
+		"lon": "-106.475",
+		"lat": "31.733333333333"
+	},
+	{
+		"cityname": "Fushun",
+		"lon": "123.9",
+		"lat": "41.866666666667"
+	},
+	{
+		"cityname": "Fukuoka",
+		"lon": "130.40166666667",
+		"lat": "33.590277777778"
+	},
+	{
+		"cityname": "Conakry",
+		"lon": "-13.6771",
+		"lat": "9.538"
+	},
+	{
+		"cityname": "Puebla",
+		"lon": "-98.209444444444",
+		"lat": "19.046944444444"
+	},
+	{
+		"cityname": "Antananarivo",
+		"lon": "47.521388888889",
+		"lat": "-18.938611111111"
+	},
+	{
+		"cityname": "Luoyang",
+		"lon": "112.4",
+		"lat": "34.66"
+	},
+	{
+		"cityname": "Hefei",
+		"lon": "117.26638888889",
+		"lat": "31.85"
+	},
+	{
+		"cityname": "Valencia",
+		"lon": "-67.983333333333",
+		"lat": "10.166666666667"
+	},
+	{
+		"cityname": "Makassar",
+		"lon": "119.4125",
+		"lat": "-5.1347222222222"
+	},
+	{
+		"cityname": "Tijuana",
+		"lon": "-117.02",
+		"lat": "32.530833333333"
+	},
+	{
+		"cityname": "Lubumbashi",
+		"lon": "27.483333333333",
+		"lat": "-11.669722222222"
+	},
+	{
+		"cityname": "Porto Alegre",
+		"lon": "-51.208055555556",
+		"lat": "-30.039444444444"
+	},
+	{
+		"cityname": "Santa Cruz de la Sierra",
+		"lon": "-63.1975",
+		"lat": "-17.789166666667"
+	},
+	{
+		"cityname": "München",
+		"lon": "11.575277777778",
+		"lat": "48.136944444444"
+	},
+	{
+		"cityname": "Handan",
+		"lon": "114.48333333333",
+		"lat": "36.6"
+	},
+	{
+		"cityname": "Kampala",
+		"lon": "32.633333333333",
+		"lat": "0.3"
+	},
+	{
+		"cityname": "Suzhou",
+		"lon": "120.6",
+		"lat": "31.316666666667"
+	},
+	{
+		"cityname": "Shantou",
+		"lon": "116.69416666667",
+		"lat": "23.373611111111"
+	},
+	{
+		"cityname": "Barranquilla",
+		"lon": "-74.7958",
+		"lat": "10.9727"
+	},
+	{
+		"cityname": "San Antonio",
+		"lon": "-98.493333333333",
+		"lat": "29.428611111111"
+	},
+	{
+		"cityname": "Davao City",
+		"lon": "125.60694444444",
+		"lat": "7.0722222222222"
+	},
+	{
+		"cityname": "Kawasaki",
+		"lon": "139.70305555556",
+		"lat": "35.530833333333"
+	},
+	{
+		"cityname": "Auckland",
+		"lon": "174.783333",
+		"lat": "-36.85"
+	},
+	{
+		"cityname": "Córdoba",
+		"lon": "-64.185833333333",
+		"lat": "-31.403611111111"
+	},
+	{
+		"cityname": "Depok",
+		"lon": "106.81861111111",
+		"lat": "-6.4"
+	},
+	{
+		"cityname": "Phnom Penh",
+		"lon": "104.91666666667",
+		"lat": "11.55"
+	},
+	{
+		"cityname": "La Matanza",
+		"lon": "-58.616666666667",
+		"lat": "-34.716666666667"
+	},
+	{
+		"cityname": "Mailand",
+		"lon": "9.1863888888889",
+		"lat": "45.4625"
+	},
+	{
+		"cityname": "Bamako",
+		"lon": "-7.9922222222222",
+		"lat": "12.645833333333"
+	},
+	{
+		"cityname": "Mekka",
+		"lon": "39.826111111111",
+		"lat": "21.4225"
+	},
+	{
+		"cityname": "Nashik",
+		"lon": "73.791666666667",
+		"lat": "20.001388888889"
+	},
+	{
+		"cityname": "Jekaterinburg",
+		"lon": "60.583333333333",
+		"lat": "56.833333333333"
+	},
+	{
+		"cityname": "Semarang",
+		"lon": "110.41666666667",
+		"lat": "-6.9833333333333"
+	},
+	{
+		"cityname": "Nischni Nowgorod",
+		"lon": "44",
+		"lat": "56.316666666667"
+	},
+	{
+		"cityname": "Baotou",
+		"lon": "109.84201666667",
+		"lat": "40.650872222222"
+	},
+	{
+		"cityname": "Adana",
+		"lon": "35.326536111111",
+		"lat": "36.988019444444"
+	},
+	{
+		"cityname": "Montevideo",
+		"lon": "-56.166666666667",
+		"lat": "-34.866666666667"
+	},
+	{
+		"cityname": "Lusaka",
+		"lon": "28.283333",
+		"lat": "-15.416667"
+	},
+	{
+		"cityname": "San Diego",
+		"lon": "-117.1625",
+		"lat": "32.715"
+	},
+	{
+		"cityname": "Kalyan-Dombivli",
+		"lon": "73.128333333333",
+		"lat": "19.229166666667"
+	},
+	{
+		"cityname": "Palembang",
+		"lon": "104.75",
+		"lat": "-2.9833333333333"
+	},
+	{
+		"cityname": "Peshawar",
+		"lon": "71.538888888889",
+		"lat": "34.011666666667"
+	},
+	{
+		"cityname": "Beirut",
+		"lon": "35.513333333333",
+		"lat": "33.886944444444"
+	},
+	{
+		"cityname": "Schiraz",
+		"lon": "52.524722222222",
+		"lat": "29.608055555556"
+	},
+	{
+		"cityname": "Suwon",
+		"lon": "127",
+		"lat": "37.25"
+	},
+	{
+		"cityname": "Dallas",
+		"lon": "-96.806666666667",
+		"lat": "32.783055555556"
+	},
+	{
+		"cityname": "Port-au-Prince",
+		"lon": "-72.338611111111",
+		"lat": "18.5425"
+	},
+	{
+		"cityname": "Perth",
+		"lon": "115.85",
+		"lat": "-31.95"
+	},
+	{
+		"cityname": "Nezahualcóyotl",
+		"lon": "-99.041944444444",
+		"lat": "19.412777777778"
+	},
+	{
+		"cityname": "Mogadischu",
+		"lon": "45.333333333333",
+		"lat": "2.0333333333333"
+	},
+	{
+		"cityname": "Merath",
+		"lon": "77.699444444444",
+		"lat": "28.99"
+	},
+	{
+		"cityname": "Amman",
+		"lon": "35.933333333333",
+		"lat": "31.95"
+	},
+	{
+		"cityname": "Mandalay",
+		"lon": "96.066666666667",
+		"lat": "21.966666666667"
+	},
+	{
+		"cityname": "Almaty",
+		"lon": "76.895833333333",
+		"lat": "43.2775"
+	},
+	{
+		"cityname": "Anshan",
+		"lon": "122.99",
+		"lat": "41.123611111111"
+	},
+	{
+		"cityname": "Xuzhou",
+		"lon": "117.16638888889",
+		"lat": "34.266388888889"
+	},
+	{
+		"cityname": "Ghaziabad",
+		"lon": "77.433333333333",
+		"lat": "28.666666666667"
+	},
+	{
+		"cityname": "Goyang",
+		"lon": "126.8",
+		"lat": "37.65"
+	},
+	{
+		"cityname": "Baku",
+		"lon": "49.882222222222",
+		"lat": "40.395277777778"
+	},
+	{
+		"cityname": "Maputo",
+		"lon": "32.588611111111",
+		"lat": "-25.965555555556"
+	},
+	{
+		"cityname": "Prag",
+		"lon": "14.421388888889",
+		"lat": "50.088611111111"
+	},
+	{
+		"cityname": "Fuzhou",
+		"lon": "119.30361111111",
+		"lat": "26.071111111111"
+	},
+	{
+		"cityname": "Rajkot",
+		"lon": "70.8075",
+		"lat": "22.303611111111"
+	},
+	{
+		"cityname": "Saitama",
+		"lon": "139.64555555556",
+		"lat": "35.861666666667"
+	},
+	{
+		"cityname": "Guiyang",
+		"lon": "106.71666666667",
+		"lat": "26.583055555556"
+	},
+	{
+		"cityname": "Goiania",
+		"lon": "-49.266666666667",
+		"lat": "-16.666666666667"
+	},
+	{
+		"cityname": "Guarulhos",
+		"lon": "-46.533333333333",
+		"lat": "-23.466666666667"
+	},
+	{
+		"cityname": "Aurangabad",
+		"lon": "75.29",
+		"lat": "19.78"
+	},
+	{
+		"cityname": "Varanasi",
+		"lon": "83",
+		"lat": "25.323611111111"
+	},
+	{
+		"cityname": "Adelaide",
+		"lon": "138.6",
+		"lat": "-34.916666666667"
+	},
+	{
+		"cityname": "Sofia",
+		"lon": "23.323333333333",
+		"lat": "42.697222222222"
+	},
+	{
+		"cityname": "Hiroshima",
+		"lon": "132.45527777778",
+		"lat": "34.385277777778"
+	},
+	{
+		"cityname": "Tripolis",
+		"lon": "13.166666666667",
+		"lat": "32.883333333333"
+	},
+	{
+		"cityname": "Port Harcourt",
+		"lon": "7",
+		"lat": "4.8"
+	},
+	{
+		"cityname": "Managua",
+		"lon": "-86.270555555556",
+		"lat": "12.146388888889"
+	},
+	{
+		"cityname": "Brazzaville",
+		"lon": "15.253055555556",
+		"lat": "-4.2516666666667"
+	},
+	{
+		"cityname": "Dubai",
+		"lon": "55.3",
+		"lat": "25.266666666667"
+	},
+	{
+		"cityname": "Samara",
+		"lon": "50.116666666667",
+		"lat": "53.183333333333"
+	},
+	{
+		"cityname": "Omsk",
+		"lon": "73.383333333333",
+		"lat": "54.966666666667"
+	},
+	{
+		"cityname": "Benin-Stadt",
+		"lon": "5.6333333333333",
+		"lat": "6.3333333333333"
+	},
+	{
+		"cityname": "Monterrey",
+		"lon": "-100.31111111111",
+		"lat": "25.682222222222"
+	},
+	{
+		"cityname": "León",
+		"lon": "-101.68861111111",
+		"lat": "21.1225"
+	},
+	{
+		"cityname": "Belgrad",
+		"lon": "20.462222222222",
+		"lat": "44.820555555556"
+	},
+	{
+		"cityname": "Maiduguri",
+		"lon": "13.15",
+		"lat": "11.833333333333"
+	},
+	{
+		"cityname": "Wuxi",
+		"lon": "120.28333333333",
+		"lat": "31.566666666667"
+	},
+	{
+		"cityname": "Kasan",
+		"lon": "49.116666666667",
+		"lat": "55.783333333333"
+	},
+	{
+		"cityname": "Gaziantep",
+		"lon": "37.388611111111",
+		"lat": "37.066944444444"
+	},
+	{
+		"cityname": "Jerewan",
+		"lon": "44.516666666667",
+		"lat": "40.183333333333"
+	},
+	{
+		"cityname": "Amritsar",
+		"lon": "74.86",
+		"lat": "31.64"
+	},
+	{
+		"cityname": "Ghom",
+		"lon": "50.878888888889",
+		"lat": "34.646111111111"
+	},
+	{
+		"cityname": "Odessa",
+		"lon": "30.733333333333",
+		"lat": "46.483333333333"
+	},
+	{
+		"cityname": "Taichung",
+		"lon": "120.66666666667",
+		"lat": "24.15"
+	},
+	{
+		"cityname": "Rostow am Don",
+		"lon": "39.716666666667",
+		"lat": "47.233333333333"
+	},
+	{
+		"cityname": "Allahabad",
+		"lon": "81.85",
+		"lat": "25.45"
+	},
+	{
+		"cityname": "Brüssel",
+		"lon": "4.3519444444444",
+		"lat": "50.845833333333"
+	},
+	{
+		"cityname": "Visakhapatnam",
+		"lon": "83.3",
+		"lat": "17.716666666667"
+	},
+	{
+		"cityname": "Tscheljabinsk",
+		"lon": "61.4",
+		"lat": "55.15"
+	},
+	{
+		"cityname": "Datong",
+		"lon": "113.28333333333",
+		"lat": "40.083333333333"
+	},
+	{
+		"cityname": "Tiflis",
+		"lon": "44.791666666667",
+		"lat": "41.716666666667"
+	},
+	{
+		"cityname": "Xianyang",
+		"lon": "108.71666666667",
+		"lat": "34.35"
+	},
+	{
+		"cityname": "Ufa",
+		"lon": "55.966666666667",
+		"lat": "54.733333333333"
+	},
+	{
+		"cityname": "Dnipropetrowsk",
+		"lon": "35.046111111111",
+		"lat": "48.464444444444"
+	},
+	{
+		"cityname": "Seongnam",
+		"lon": "127.15",
+		"lat": "37.433333333333"
+	},
+	{
+		"cityname": "Campinas",
+		"lon": "-47.056666666667",
+		"lat": "-22.899722222222"
+	},
+	{
+		"cityname": "Ouagadougou",
+		"lon": "-1.526",
+		"lat": "12.37"
+	},
+	{
+		"cityname": "Jabalpur",
+		"lon": "79.938333333333",
+		"lat": "23.176111111111"
+	},
+	{
+		"cityname": "Ulan Bator",
+		"lon": "106.91666666667",
+		"lat": "47.916666666667"
+	},
+	{
+		"cityname": "Haora",
+		"lon": "88.3",
+		"lat": "22.583333333333"
+	},
+	{
+		"cityname": "Huainan",
+		"lon": "117.01638888889",
+		"lat": "32.483055555556"
+	},
+	{
+		"cityname": "Sendai",
+		"lon": "140.86944444444",
+		"lat": "38.268333333333"
+	},
+	{
+		"cityname": "Kunming",
+		"lon": "102.68333333333",
+		"lat": "25.066666666667"
+	},
+	{
+		"cityname": "Schubra al-Chaima",
+		"lon": "31.242222222222",
+		"lat": "30.128611111111"
+	},
+	{
+		"cityname": "Birmingham",
+		"lon": "-1.8936",
+		"lat": "52.4829"
+	},
+	{
+		"cityname": "Köln",
+		"lon": "6.9569444444444",
+		"lat": "50.938055555556"
+	},
+	{
+		"cityname": "Rongcheng",
+		"lon": "122.43426944444",
+		"lat": "37.130641666667"
+	}
+]
