@@ -8,15 +8,7 @@ function reset(){
 	resetMap();
 
 	// Disconnect events
-	dojo.disconnect(onClick_connect)
-
-	//TODO: Bessere Lösung suchen -> jQuery verwenden !!
-	// if (dijit.byId("btnAnswer")){
-	// 	dojo.style(dijit.byId('btnAnswer').domNode, {visibility:'hidden'});
-	// }
-	// if (dijit.byId("btnNewQuestion")){
-	// 	dojo.style(dijit.byId('btnNewQuestion').domNode, {visibility:'hidden'});
-	// }
+	dojo.disconnect(onClick_connect);
 
 	resetButtons();
 }
@@ -123,32 +115,6 @@ function newGuessCityOnMapQuestion() {
 
 	$("#btnCheckAnswer").show();
 	$("#btnNewQuestion").hide();
-
-	// Check whether buttons are already created; else, create them
-	// if (dijit.byId("btnAnswer")){
-	// 	dojo.style(dijit.byId('btnAnswer').domNode, {visibility:'visible'});
-	// 	dojo.style(dijit.byId('btnNewQuestion').domNode, {visibility:'hidden'});
-	// }
-	// else{
-	// 	var button = new dijit.form.Button({
-	// 		id: "btnAnswer",
-	// 		label: "Check answer",
-	// 		onClick: function(){
-	// 	   		answer();
-	// 		}
-	// 	}, "divBtnAnswer");
-
-		// var btnNewQuestion = new dijit.form.Button({
-		// 	id: "btnNewQuestion",
-		// 	label: "Try another one",
-		// 	onClick: function(){
-		//    		newGuessCityOnMapQuestion();
-		// 	}
-		// }, "divBtnNewQuestion");
-		
-		// Hide btnNewQuestion initially
-		//dojo.style(dijit.byId('btnNewQuestion').domNode, {visibility:'hidden'});
-	//}
 	
 	zoomTo(question.lon, question.lat, question.zoom);
 }
@@ -166,8 +132,6 @@ function answer() {
 function showAnswer(option) {
     var cityname = fourCities[questionIndex].cityname;
 
-	//dojo.style(dijit.byId('btnAnswer').domNode, {visibility:'hidden'});
-	//dojo.style(dijit.byId('btnNewQuestion').domNode, {visibility:'visible'});
 	$("#btnCheckAnswer").hide();
 	$("#btnNewQuestion").show();
 
