@@ -1,18 +1,19 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
-  <head>
+<head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=7,IE=9"> 
+    <meta http-equiv="X-UA-Compatible" content="IE=7,IE=9">
     <!--The viewport meta tag is used to improve the presentation and behavior of the samples 
       on iOS devices-->
-    <meta name="viewport" content="initial-scale=1, maximum-scale=1,user-scalable=no"> 
-    <title></title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1,user-scalable=no">
+    <title>GeoQuiz</title>
 
     <link rel="stylesheet" href="http://serverapi.arcgisonline.com/jsapi/arcgis/3.4/js/dojo/dijit/themes/claro/claro.css">
     <link rel="stylesheet" href="http://serverapi.arcgisonline.com/jsapi/arcgis/3.4/js/esri/css/esri.css" />
-    <link rel="stylesheet" href="css/layout.css"/>
+    <link rel="stylesheet" href="css/layout.css" />
 
     <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+    <script src="js/vendor/knockout-2.2.1.js"></script>
 
     <script>var dojoConfig = { parseOnLoad: true };</script>
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
@@ -20,88 +21,80 @@
     <script type="text/javascript" src="js/gisFunctionality.js"></script>
     <script type="text/javascript" src="js/quizCode.js"></script>
     <script type="text/javascript" src="js/utils.js"></script>
-    
+
     <script>
-      dojo.require("esri.map");
-      dojo.require("esri.layers.FeatureLayer");
-      dojo.require("dijit.layout.BorderContainer");
-      dojo.require("dijit.layout.ContentPane");
-      dojo.require("dijit.layout.TabContainer");
-      
-      var map;
-      var esriImagery, esriImageryWorld2D, esriCountries, gMap;
+        dojo.require("esri.map");
+        dojo.require("esri.layers.FeatureLayer");
+        dojo.require("dijit.layout.BorderContainer");
+        dojo.require("dijit.layout.ContentPane");
+        dojo.require("dijit.layout.TabContainer");
 
-      function init() {
+        var map;
+        var esriImagery, esriImageryWorld2D, esriCountries, gMap;
 
-        var initExtent = getInitExtent();
+        function init() {
 
-        map = new esri.Map("map", {
-          extent: initExtent,
-          logo: false
-        });
+            var initExtent = getInitExtent();
 
-        // Esri-Maps 
-        var esriImageryUrl = "http://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer";
-        esriImagery = new esri.layers.ArcGISTiledMapServiceLayer(esriImageryUrl, {
-          id: "esriImagery"
-        });
-        map.addLayer(esriImagery);
-        
-        esriImageryWorld2D = initLayer("http://server.arcgisonline.com/ArcGIS/rest/services/ESRI_Imagery_World_2D/MapServer", "esriImageryWorld2D");
+            map = new esri.Map("map", {
+                extent: initExtent,
+                logo: false
+            });
+
+            // Esri-Maps 
+            var esriImageryUrl = "http://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer";
+            esriImagery = new esri.layers.ArcGISTiledMapServiceLayer(esriImageryUrl, {
+                id: "esriImagery"
+            });
+            map.addLayer(esriImagery);
+
+            esriImageryWorld2D = initLayer("http://server.arcgisonline.com/ArcGIS/rest/services/ESRI_Imagery_World_2D/MapServer", "esriImageryWorld2D");
 
 
 
-        // Google-Maps
-        // gMap = new gmaps.GoogleMapsLayer({
-        //   visible: false,
-        //   id: 'googlemaps'
-        // });
-        // map.addLayer(gMap);
-      }
+            // Google-Maps
+            // gMap = new gmaps.GoogleMapsLayer({
+            //   visible: false,
+            //   id: 'googlemaps'
+            // });
+            // map.addLayer(gMap);
+        }
 
-      dojo.ready(init);
+        dojo.ready(init);
     </script>
-  </head>
-  
-  <body class="claro">
-    <div id="mainWindow" 
-         data-dojo-type="dijit.layout.BorderContainer" 
-         data-dojo-props="design:'headline', gutters:false" 
-         style="width:100%; height:100%;">
+</head>
 
-      <div id="header" 
-           data-dojo-type="dijit.layout.ContentPane" data-dojo-props="region:'top'">
-           <div>Geo-Quiz</div>  
-           <!-- ev. später mit einer 1-row table lösen-->    
-      </div>
-      <div data-dojo-type="dijit.layout.ContentPane" id="leftPane" data-dojo-props="region:'left', splitter:false">
-        <div id="divQuestion"></div>
-        <br/>
-        <!-- <div id="divBtnAnswer"></div>
-        <div id="divBtnNewQuestion"></div> -->
-        <button id="btnCheckAnswer">Check Answer</button>
-        <button id="btnNewQuestion">Try another one</button>
-        <button id="btnShowSolution">Show me</button>
-      </div>
+<body class="claro">
+    <div id="mainWindow"
+        data-dojo-type="dijit.layout.BorderContainer"
+        data-dojo-props="design:'headline', gutters:false"
+        style="width: 100%; height: 100%;">
 
-      <div id="map" data-dojo-type="dijit.layout.ContentPane" data-dojo-props="region:'center'"></div>
-
-      <div id="footer" data-dojo-type="dijit.layout.ContentPane" data-dojo-props="region:'bottom'">
-        <div id="buttons" style="position:absolute; right:75px; top:20px; z-Index:999;">
-          <a href="JavaScript:initGuessCityOnMapQuestion()"><img src="img/GuessTheCity.png" height="30px"></a>
-          <a href="JavaScript:initPointOnMapQuestion()"><img src="img/LocateTheCity.png" height="30px"></a>
-          <a href="JavaScript:initFindTheCountryQuestion()"><img src="img/FindTheCountry.png" height="30px"></a>
-          <!--<button dojoType="dijit.form.Button" onClick="changeMap([esriCountries]);">
-            Countries
-          </button>
-          <button dojoType="dijit.form.Button" onClick="changeMap([esriImageryWorld2D]);">
-            ESRI Imagery World 2D
-          </button>
-          <button dojoType="dijit.form.Button" onClick="changeMap([gMap]);gMap.setMapTypeId('satellite')">
-            Google Satellite
-          </button> -->
+        <div id="header"
+            data-dojo-type="dijit.layout.ContentPane" data-dojo-props="region:'top'">
+            <div>Geo-Quiz</div>
+            <!-- ev. später mit einer 1-row table lösen-->
         </div>
-      </div>
+        <div data-dojo-type="dijit.layout.ContentPane" id="leftPane" data-dojo-props="region:'left', splitter:false">
+            <div id="divQuestion"></div>
+            <br />
+            <button id="btnCheckAnswer">Check Answer</button>
+            <button id="btnNewQuestion">Try another one</button>
+            <button id="btnShowSolution">Show me</button>
+        </div>
+
+        <div id="map" data-dojo-type="dijit.layout.ContentPane" data-dojo-props="region:'center'"></div>
+
+        <div id="footer" data-dojo-type="dijit.layout.ContentPane" data-dojo-props="region:'bottom'">
+            <div id="buttons" style="position: absolute; right: 75px; top: 20px; z-Index: 999;">
+                <a href="JavaScript:initGuessCityOnMapQuestion()">
+                    <img src="img/GuessTheCity.png" height="30" alt="GuessTheCityImage"></a>
+                <a href="JavaScript:initPointOnMapQuestion()">
+                    <img src="img/LocateTheCity.png" height="30" alt="LocateTheCityImage"></a>
+                <a href="JavaScript:initFindTheCountryQuestion()">
+                    <img src="img/FindTheCountry.png" height="30" alt="FindTheCountryImage"></a>
+            </div>
+        </div>
     </div>
-  </body>
+</body>
 </html>
