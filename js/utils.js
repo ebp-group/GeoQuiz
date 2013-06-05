@@ -1,5 +1,5 @@
-// n=Anzahl Zufallszahlen, die geliefert werden sollen
-// m=Obergrenze der Zufallszahlen
+/* n=Anzahl Zufallszahlen, die geliefert werden sollen
+   m=Obergrenze der Zufallszahlen */
 function getNDifferentRndNumbers(n, m) {
 	var arr = [];
 	while (arr.length < n){
@@ -14,6 +14,7 @@ function getNDifferentRndNumbers(n, m) {
 	return arr;
 }
 
+// Create URL to english wikipedia page
 function getWikiLink(wikiTopic){
 	var urlWikipedia = encodeURI("http://en.wikipedia.org/wiki/" + wikiTopic);
 	var hrefWikipedia = "<a target='_blank' href=" + urlWikipedia + ">Read more in Wikipedia</a>";
