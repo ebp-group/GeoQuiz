@@ -1,4 +1,14 @@
-# [HTML5 Boilerplate](http://html5boilerplate.com)
+# GeoQuiz
+
+Geography quiz with different games.
+* Guess the City
+* Locate the City
+* Find the Country
+
+
+GeoQuiz is based on HTML5 Boilerplate
+
+## [HTML5 Boilerplate](http://html5boilerplate.com)
 
 HTML5 Boilerplate is a professional front-end template for building fast,
 robust, and adaptable web apps or sites.
