@@ -1,22 +1,27 @@
-/* n=Anzahl Zufallszahlen, die geliefert werden sollen
-   m=Obergrenze der Zufallszahlen */
+/* n = Number of random numbers to be created
+   m = Upper boundary of the random numbers */
 function getNDifferentRndNumbers(n, m) {
     var arr = [];
+    var randomnumber = -1;
+    var found = false;
+    
     while (arr.length < n) {
-        var randomnumber = Math.floor(Math.random() * m);
-        var found = false;
+        randomnumber = Math.floor(Math.random() * m);
+        found = false;
+        // Avoid to get equal random numbers
         for (var i = 0; i < arr.length; i++) {
-            if (arr[i] == randomnumber) { found = true; break }
+            if (arr[i] === randomnumber) { found = true; break; }
         }
-        if (!found) arr[arr.length] = randomnumber;
+        if (!found) { arr[arr.length] = randomnumber; }
     }
 	
 	return arr;
 }
 
-// Create URL to english wikipedia page
-function getWikiLink(wikiTopic) {
-    var urlWikipedia = encodeURI("http://en.wikipedia.org/wiki/" + wikiTopic);
+// Create URL to wikipedia page; lang defines the desired language (version) of wikipedia
+function getWikiLink(wikiTopic, lang) {
+    var urlWikipedia = encodeURI("http://" + lang + ".wikipedia.org/wiki/" + wikiTopic);
     var hrefWikipedia = "<a target='_blank' href=" + urlWikipedia + ">Read more in Wikipedia</a>";
+
     return hrefWikipedia;
 }

@@ -43,6 +43,14 @@ function getInitExtent(){
   return initExtent;
 }
 
+function showCoordinates(evt) {
+    //get mapPoint from event
+    //The map is in web mercator - modify the map point to display the results in geographic
+    var mp = esri.geometry.webMercatorToGeographic(evt.mapPoint);
+    //display mouse coordinates
+    dojo.byId("info").innerHTML = mp.x.toFixed(3) + ", " + mp.y.toFixed(3);
+}
+
 // lat and lon in radiant since the Math-lib of JS needs rad as input!
 function computeDistance(lat1, lon1, lat2, lon2){
   var angle = Math.acos(Math.sin(lat1)*Math.sin(lat2) + Math.cos(lat1)*Math.cos(lat2)*Math.cos(lon2 - lon1));

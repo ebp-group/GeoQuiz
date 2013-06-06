@@ -30,13 +30,18 @@
         dojo.require("dijit.layout.TabContainer");
 
         var map;
-        var esriImagery, esriImageryWorld2D, esriCountries, gMap;
+        var esriImagery, esriImageryWorld2D;
 
         function init() {
             var initExtent = getInitExtent();
             map = new esri.Map("map", {
                 extent: initExtent,
                 logo: false
+            });
+
+            map.on("load", function () {
+                //after map loads, connect to listen to mouse move event (to show the coordinates)
+                map.on("mouse-move", showCoordinates);
             });
 
             // Esri-Maps 
@@ -50,6 +55,7 @@
         }
 
         dojo.ready(init);
+        resetButtons();
     </script>
 </head>
 
@@ -71,13 +77,16 @@
             <button id="btnShowSolution">Show me</button>
         </div>
 
-        <div id="map" data-dojo-type="dijit.layout.ContentPane" data-dojo-props="region:'center'"></div>
+        <div id="map" data-dojo-type="dijit.layout.ContentPane" data-dojo-props="region:'center'">
+            <span id="info" style="position:absolute; left:15px; bottom:5px; color:#fff; z-index:50;"></span><!-- span to show coordinates -->
+        </div>
 
         <div id="footer" data-dojo-type="dijit.layout.ContentPane" data-dojo-props="region:'bottom'">
             <div id="buttons" style="position: absolute; right: 75px; top: 20px; z-Index: 999;">
                 <input id="gobutton" type="submit" data-bind="click:btnGuessTheCityClicked" value="Guess the City" />
                 <input id="gobutton" type="submit" data-bind="click:btnLocateTheCityClicked" value="Locate the City" />
                 <input id="gobutton" type="submit" data-bind="click:btnFindTheCountryClicked" value="Find the Country" />
+                <input id="gobutton" type="submit" data-bind="click:btnGuessTheGeomorphClicked" value="Guess the Geomorph" />
             </div>
         </div>
     </div>
@@ -88,7 +97,8 @@
             "chosenGame": ko.observable("Choose a Game"),
             "btnGuessTheCityClicked": function () { initGuessCityOnMapQuestion(); },
             "btnLocateTheCityClicked": function () { initPointOnMapQuestion(); },
-            "btnFindTheCountryClicked": function () { initFindTheCountryQuestion(); }
+            "btnFindTheCountryClicked": function () { initFindTheCountryQuestion(); },
+            "btnGuessTheGeomorphClicked": function () { initGuessGeomorphOnMapQuestion(); }
         }
         ko.applyBindings(viewModel);
     </script>
