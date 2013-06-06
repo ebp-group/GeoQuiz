@@ -61,8 +61,7 @@
 
         <div id="header"
             data-dojo-type="dijit.layout.ContentPane" data-dojo-props="region:'top'">
-            <div>Geo-Quiz</div>
-            <!-- ev. später mit einer 1-row table lösen-->
+            <table><tr><td>Geo-Quiz - </td><td><div data-bind="text:chosenGame">Choose a Game</div></td></tr></table>
         </div>
         <div data-dojo-type="dijit.layout.ContentPane" id="leftPane" data-dojo-props="region:'left', splitter:false">
             <div id="divQuestion"></div>
@@ -76,14 +75,22 @@
 
         <div id="footer" data-dojo-type="dijit.layout.ContentPane" data-dojo-props="region:'bottom'">
             <div id="buttons" style="position: absolute; right: 75px; top: 20px; z-Index: 999;">
-                <a href="JavaScript:initGuessCityOnMapQuestion()">
-                    <img src="img/GuessTheCity.png" height="30" alt="GuessTheCityImage"></a>
-                <a href="JavaScript:initPointOnMapQuestion()">
-                    <img src="img/LocateTheCity.png" height="30" alt="LocateTheCityImage"></a>
-                <a href="JavaScript:initFindTheCountryQuestion()">
-                    <img src="img/FindTheCountry.png" height="30" alt="FindTheCountryImage"></a>
+                <input id="gobutton" type="submit" data-bind="click:btnGuessTheCityClicked" value="Guess the City" />
+                <input id="gobutton" type="submit" data-bind="click:btnLocateTheCityClicked" value="Locate the City" />
+                <input id="gobutton" type="submit" data-bind="click:btnFindTheCountryClicked" value="Find the Country" />
             </div>
         </div>
     </div>
+
+    <script>
+        // ViewModel
+        var viewModel = {
+            "chosenGame": ko.observable("Choose a Game"),
+            "btnGuessTheCityClicked": function () { initGuessCityOnMapQuestion(); },
+            "btnLocateTheCityClicked": function () { initPointOnMapQuestion(); },
+            "btnFindTheCountryClicked": function () { initFindTheCountryQuestion(); }
+        }
+        ko.applyBindings(viewModel);
+    </script>
 </body>
 </html>

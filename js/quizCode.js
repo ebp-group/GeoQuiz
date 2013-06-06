@@ -13,12 +13,12 @@ function reset(){
 	resetButtons();
 }
 
-function resetMap(){
-	map.infoWindow.hide();
-	map.graphics.clear();
-	if (featureLayerCountries != null && featureLayerCountries.visible){
-		featureLayerCountries.hide();
-	}
+function resetMap() {
+    map.infoWindow.hide();
+    map.graphics.clear();
+    if (featureLayerCountries != null && featureLayerCountries.visible) {
+        featureLayerCountries.hide();
+    }
 }
 
 function resetButtons(){
@@ -31,30 +31,31 @@ function resetButtons(){
 }
 
 function initPointOnMapQuestion() {
-	reset();
+    reset();
+    viewModel.chosenGame("Locate the City");
 
-	$("#btnNewQuestion").show();
-	$("#btnNewQuestion").click(function() {
-		newPointOnMapQuestion();
-	});
+    $("#btnNewQuestion").show();
+    $("#btnNewQuestion").click(function () {
+        newPointOnMapQuestion();
+    });
 
-	// Connect onClick-event
-	onClick_connect = dojo.connect(map, 'onClick', getCoordinates);
-	
-	// Load the questions-file
+    // Connect onClick-event
+    onClick_connect = dojo.connect(map, 'onClick', getCoordinates);
+
+    // Load the questions-file
     $.ajax('data/cities_point.json', {
-    	async: false,
-    	dataType: "json",
-    	success: function(data) {
-    		questions = data;
-    	},
-    	error: function(jqXHR, textStatus, errorThrown ) {
-    		alert("Error while trying to retrive questions\n"+errorThrown);
-    	}
+        async: false,
+        dataType: "json",
+        success: function (data) {
+            questions = data;
+        },
+        error: function (jqXHR, textStatus, errorThrown) {
+            alert("Error while trying to retrive questions\n" + errorThrown);
+        }
     });
 
     map.setExtent(getInitExtent());
-	newPointOnMapQuestion();
+    newPointOnMapQuestion();
 }
 
 function newPointOnMapQuestion() {
@@ -69,6 +70,7 @@ function newPointOnMapQuestion() {
 
 function initGuessCityOnMapQuestion(){
 	reset();
+    viewModel.chosenGame("Guess the City");
 
 	$("#btnCheckAnswer").click(function() {
 		answer();
@@ -166,6 +168,7 @@ function initFeatureLayerCountries(){
 
 function initFindTheCountryQuestion(){
     reset();
+    viewModel.chosenGame("Find the Country");
 
 	$("#btnNewQuestion").show();
 	$("#btnNewQuestion").click(function() {
@@ -305,7 +308,7 @@ function getCountryName(evt){
     query.outFields = ["CNTRY_NAME"];
 
 	//onClick event returns the evt point where the user clicked on the map.
-    //This is contains the mapPoint (esri.geometry.point) and the screenPoint (pixel xy where the user clicked).
+    //This contains the mapPoint (esri.geometry.point) and the screenPoint (pixel xy where the user clicked).
     //set query geometry = to evt.mapPoint Geometry
     query.geometry = evt.mapPoint;
 
