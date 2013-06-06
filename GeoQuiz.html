@@ -87,6 +87,8 @@
                 <input id="gobutton" type="submit" data-bind="click:btnLocateTheCityClicked" value="Locate the City" />
                 <input id="gobutton" type="submit" data-bind="click:btnFindTheCountryClicked" value="Find the Country" />
                 <input id="gobutton" type="submit" data-bind="click:btnGuessTheGeomorphClicked" value="Guess the Geomorph" />
+                <input id="gobutton" type="submit" data-bind="click:btnFindTheCantonClicked" value="Find the Canton" />
+                <input id="gobutton" type="submit" data-bind="click:btnLocateThePeakClicked" value="Locate the Peak" />
             </div>
         </div>
     </div>
@@ -98,7 +100,9 @@
             "btnGuessTheCityClicked": function () { initGuessCityOnMapQuestion(); },
             "btnLocateTheCityClicked": function () { initPointOnMapQuestion(); },
             "btnFindTheCountryClicked": function () { initFindTheCountryQuestion(); },
-            "btnGuessTheGeomorphClicked": function () { initGuessGeomorphOnMapQuestion(); }
+            "btnGuessTheGeomorphClicked": function () { initGuessGeomorphOnMapQuestion(); },
+            "btnFindTheCantonClicked": function () { initFindTheCantonQuestion(); },
+            "btnLocateThePeakClicked": function () { initLocateThePeakQuestion(); }
         }
         ko.applyBindings(viewModel);
     </script>

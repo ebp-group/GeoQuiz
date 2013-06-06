@@ -3,6 +3,7 @@ var fourCities = [];
 var geomorphOptions = [];
 var onClick_connect;
 var featureLayerCountries;
+var featureLayerCantons;
 var symbol;
 
 function reset() {
@@ -19,6 +20,9 @@ function resetMap() {
     map.graphics.clear();
     if (featureLayerCountries != null && featureLayerCountries.visible) {
         featureLayerCountries.hide();
+    }
+    if (featureLayerCantons != null && featureLayerCantons.visible) {
+        featureLayerCantons.hide();
     }
 }
 
@@ -164,6 +168,15 @@ function initFeatureLayerCountries() {
 
     //TODO: Später mal testen mit featureLayerCountries.selectFeatures(query, esri.layers.FeatureLayer.SELECTION_NEW);
     //fl.setSelectionSymbol(new esri.symbol.SimpleFillSymbol().setOutline(null).setColor("#AEC7E3"));
+}
+
+function initFeatureLayerCantons() {
+    var url = "https://services.arcgis.com/apU8fgSIuj1S2tCQ/arcgis/rest/services/cantonCopy_web_system/FeatureServer/0";
+    var template = new esri.InfoTemplate("Canton", "Name: ${PROVNAME}");
+    featureLayerCantons = new esri.layers.FeatureLayer(url, {
+        id: "cantons",
+        outFields: ["PROVNAME"]
+    });
 }
 
 function initFindTheCountryQuestion() {
@@ -327,7 +340,7 @@ function showResults(featureSet) {
 
         if (feature.attributes.CNTRY_NAME == questions[questionIndex].country) {
             map.infoWindow.setTitle("Correct");
-            map.infoWindow.setContent("This is indeed " + feature.attributes.CNTRY_NAME + "<br/>" + getWikiLink(feature.attributes.CNTRY_NAME), "en");
+            map.infoWindow.setContent("This is indeed " + feature.attributes.CNTRY_NAME + "<br/>" + getWikiLink(feature.attributes.CNTRY_NAME, "en"));
         }
         else {
             map.infoWindow.setTitle("Wrong");
@@ -338,18 +351,6 @@ function showResults(featureSet) {
         map.graphics.add(graphic);
         map.infoWindow.show(query.geometry);
     });
-}
-
-function initFeatureLayerCanton() {
-    var url = "https://services.arcgis.com/apU8fgSIuj1S2tCQ/arcgis/rest/services/cantonCopy_web_system/FeatureServer/0";
-    var template = new esri.InfoTemplate("Canton", "Name: ${PROVNAME}");
-    featureLayerCanton = new esri.layers.FeatureLayer(url, {
-        id: "world-regions",
-        outFields: ["PROVNAME"]
-    });
-
-    //TODO: Später mal testen mit featureLayerCountries.selectFeatures(query, esri.layers.FeatureLayer.SELECTION_NEW);
-    //fl.setSelectionSymbol(new esri.symbol.SimpleFillSymbol().setOutline(null).setColor("#AEC7E3"));
 }
 
 function initGuessGeomorphOnMapQuestion() {
@@ -427,12 +428,158 @@ function showAnswerGeomorph(option) {
 
     if (option == geomorphName) {
         map.infoWindow.setTitle("Richtig!");
-        map.infoWindow.setContent("Das ist " + geomorphName + "<br/>" + hrefWikipedia);
+        map.infoWindow.setContent(hrefWikipedia);
     }
     else {
         map.infoWindow.setTitle("Falsch!");
-        map.infoWindow.setContent("Das ist " + geomorphName + "<br/>" + hrefWikipedia);
+        map.infoWindow.setContent("Das ist ein(e) " + geomorphName + "<br/>" + hrefWikipedia);
     }
 
     map.infoWindow.show(point);
+}
+
+/*
+GAME: FIND THE CANTON
+*/
+function initFindTheCantonQuestion() {
+    reset();
+    viewModel.chosenGame("Find the Canton");
+
+    $("#btnNewQuestion").show();
+    $("#btnNewQuestion").click(function () {
+        newFindTheCantonQuestion();
+    });
+
+    //$("#btnShowSolution").show();
+    //$("#btnShowSolution").click(function () {
+    //    showCountry(questions[questionIndex].country);
+    //});
+
+    if (featureLayerCountries == null) {
+        initFeatureLayerCantons();
+        map.addLayer(featureLayerCantons);
+    }
+    else {
+        featureLayerCantons.show();
+    }
+
+    // Init MarkerSymbol
+    symbol = new esri.symbol.SimpleFillSymbol(
+    	esri.symbol.SimpleFillSymbol.STYLE_SOLID,
+    	new esri.symbol.SimpleLineSymbol(esri.symbol.SimpleLineSymbol.STYLE_SOLID,
+    		new dojo.Color([255, 0, 0]), 2), new dojo.Color([255, 0, 0, 0.5]));
+
+    // Load the questions-file
+    $.ajax('data/cantons.json', {
+        async: false,
+        dataType: "json",
+        success: function (data) {
+            questions = data;
+        },
+        error: function (jqXHR, textStatus, errorThrown) {
+            alert("Error while trying to retrive questions\n" + errorThrown);
+        }
+    });
+
+    // Connect onClick-event
+    onClick_connect = dojo.connect(map, 'onClick', getCantonName);
+
+    //map.setExtent(getInitExtent());
+    newFindTheCantonQuestion();
+}
+
+function newFindTheCantonQuestion() {
+    //TODO: Momentan problematisch wegen featureLayer(hide)
+    //resetMap();
+    // Daher nur mal das:
+    map.infoWindow.hide();
+    map.graphics.clear();
+
+    questionIndex = getNDifferentRndNumbers(1, questions.length);
+    var question = questions[questionIndex];
+
+    var container = $('#divQuestion');
+    var img = "<img src=\"" + question.image + "\" width=\"120\">";
+    container.html(img);
+}
+
+function getCantonName(evt) {
+    queryTask = new esri.tasks.QueryTask(featureLayerCantons.url);
+
+    // Build query filter
+    query = new esri.tasks.Query();
+    query.returnGeometry = true;
+    query.outFields = ["PROVNAME"];
+
+    //onClick event returns the evt point where the user clicked on the map.
+    //This contains the mapPoint (esri.geometry.point) and the screenPoint (pixel xy where the user clicked).
+    //set query geometry = to evt.mapPoint Geometry
+    query.geometry = evt.mapPoint;
+
+    //Execute task and call showResults on completion
+    queryTask.execute(query, showResultCanton);
+}
+
+function showResultCanton(featureSet) {
+    // Remove all graphics on the maps graphics layer
+    map.graphics.clear();
+
+    // QueryTask returns a featureSet.  Loop through features in the featureSet and add them to the map.
+    dojo.forEach(featureSet.features, function (feature) {
+        var graphic = feature;
+        graphic.setSymbol(symbol);
+
+        if (feature.attributes.PROVNAME == questions[questionIndex].name) {
+            map.infoWindow.setTitle("Richtig!");
+            map.infoWindow.setContent("Das ist in der Tat " + feature.attributes.PROVNAME + "<br/>" + getWikiLink(feature.attributes.PROVNAME, "de"));
+        }
+        else {
+            map.infoWindow.setTitle("Falsch!");
+            map.infoWindow.setContent("Das ist " + feature.attributes.PROVNAME + " und nicht " + questions[questionIndex].name);
+        }
+
+        // Add graphic to the map graphics layer.
+        map.graphics.add(graphic);
+        map.infoWindow.show(query.geometry);
+    });
+}
+
+/* 
+GAME: LOCATE THE PEAK
+*/
+function initLocateThePeakQuestion() {
+    reset();
+    viewModel.chosenGame("Locate the Peak");
+
+    $("#btnNewQuestion").show();
+    $("#btnNewQuestion").click(function () {
+        newPointOnMapQuestion();
+    });
+
+    // Connect onClick-event
+    onClick_connect = dojo.connect(map, 'onClick', getCoordinates);
+
+    // Load the questions-file
+    $.ajax('data/peaks.json', {
+        async: false,
+        dataType: "json",
+        success: function (data) {
+            questions = data;
+        },
+        error: function (jqXHR, textStatus, errorThrown) {
+            alert("Error while trying to retrive questions\n" + errorThrown);
+        }
+    });
+
+    newLocateThePeakQuestion();
+}
+
+function newLocateThePeakQuestion() {
+	resetMap();
+
+	questionIndex = getNDifferentRndNumbers(1, questions.length);
+	var question = questions[questionIndex];
+
+	var container = $('#divQuestion');
+	container.html('Where on the map is ' + question.name + ' located?');
 }
