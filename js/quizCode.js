@@ -553,7 +553,7 @@ function initLocateThePeakQuestion() {
 
     $("#btnNewQuestion").show();
     $("#btnNewQuestion").click(function () {
-        newPointOnMapQuestion();
+        newLocateThePeakQuestion();
     });
 
     // Connect onClick-event
