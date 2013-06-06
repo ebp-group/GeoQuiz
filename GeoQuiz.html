@@ -6,7 +6,7 @@
     <!--The viewport meta tag is used to improve the presentation and behavior of the samples 
       on iOS devices-->
     <meta name="viewport" content="initial-scale=1, maximum-scale=1,user-scalable=no">
-    <title>GeoQuiz</title>
+    <title>Geo-Quiz</title>
 
     <link rel="stylesheet" href="http://serverapi.arcgisonline.com/jsapi/arcgis/3.4/js/dojo/dijit/themes/claro/claro.css">
     <link rel="stylesheet" href="http://serverapi.arcgisonline.com/jsapi/arcgis/3.4/js/esri/css/esri.css" />
@@ -72,9 +72,13 @@
         <div data-dojo-type="dijit.layout.ContentPane" id="leftPane" data-dojo-props="region:'left', splitter:false">
             <div id="divQuestion"></div>
             <br />
-            <button id="btnCheckAnswer">Check Answer</button>
-            <button id="btnNewQuestion">Try another one</button>
-            <button id="btnShowSolution">Show me</button>
+            <table>
+                <tr>
+                    <td><button id="btnCheckAnswer">Check Answer</button></td>
+                    <td><button id="btnNewQuestion">Try another one</button></td>
+                    <td><button id="btnShowSolution">Show me</button></td>
+                </tr>
+            </table>
         </div>
 
         <div id="map" data-dojo-type="dijit.layout.ContentPane" data-dojo-props="region:'center'">

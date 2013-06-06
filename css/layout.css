@@ -65,6 +65,36 @@ input#gobutton:hover, input#gobutton:focus {
 }
 
 
+button {
+    width: 75px; /*same as the height*/
+    height: 75px; /*same as the width*/
+    background-color: #33842a;
+    border: 1px solid #33842a; /*same colour as the background*/
+    color: #fff;
+    font-size: 1.0em;
+    /*set the border-radius at half the size of the width and height*/
+    -webkit-border-radius: 37px;
+    -moz-border-radius: 37px;
+    border-radius: 37px;
+    /*give the button a small drop shadow*/
+    -webkit-box-shadow: 0 0 10px rgba(0,0,0, .75);
+    -moz-box-shadow: 0 0 10px rgba(0,0,0, .75);
+    box-shadow: 2px 2px 15px rgba(0,0,0, .75);
+}
+/***NOW STYLE THE BUTTON'S HOVER STATE***/
+button:hover {
+    background: #185712;
+    border: 1px solid #185712;
+    /*reduce the size of the shadow to give a pushed effect*/
+    -webkit-box-shadow: 0px 0px 5px rgba(0,0,0, .75);
+    -moz-box-shadow: 0px 0px 5px rgba(0,0,0, .75);
+    box-shadow: 0px 0px 5px rgba(0,0,0, .75);
+}
+
+
+
+
+
 /*.myIcon {
   background-image: url(../images/GuessTheCity.png);
   background-repeat: no-repeat;

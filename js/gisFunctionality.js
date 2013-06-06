@@ -43,6 +43,20 @@ function getInitExtent(){
   return initExtent;
 }
 
+function getInitExtentSwitzerland(){
+  var initExtent = new esri.geometry.Extent({
+    "xmin": 666563,
+    "ymin": 5695420,
+    "xmax": 1274537,
+    "ymax": 6171184,
+    "spatialReference": {
+      "wkid": 102100
+    }
+  });
+
+  return initExtent;
+}
+
 function showCoordinates(evt) {
     //get mapPoint from event
     //The map is in web mercator - modify the map point to display the results in geographic

@@ -302,7 +302,7 @@ function getCoordinates(evt) {
 
     if (dist < 150) {
         map.infoWindow.setTitle("Excellent");
-        map.infoWindow.setContent("A very good guess (within 150 km).<br/>" + getWikiLink(questions[questionIndex].cityname, "en"));
+        map.infoWindow.setContent("A very good guess.<br/>" + getWikiLink(questions[questionIndex].cityname, "en"));
     }
     else {
         map.infoWindow.setTitle("Oops");
@@ -484,7 +484,7 @@ function initFindTheCantonQuestion() {
     // Connect onClick-event
     onClick_connect = dojo.connect(map, 'onClick', getCantonName);
 
-    //map.setExtent(getInitExtent());
+    map.setExtent(getInitExtentSwitzerland());
     newFindTheCantonQuestion();
 }
 
@@ -571,6 +571,7 @@ function initLocateThePeakQuestion() {
         }
     });
 
+    map.setExtent(getInitExtentSwitzerland());
     newLocateThePeakQuestion();
 }
 
