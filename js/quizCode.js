@@ -173,11 +173,11 @@ function initFeatureLayerCountries() {
 }
 
 function initFeatureLayerCantons() {
-    var url = "https://services.arcgis.com/apU8fgSIuj1S2tCQ/arcgis/rest/services/cantonCopy_web_system/FeatureServer/0";
-    var template = new esri.InfoTemplate("Canton", "Name: ${PROVNAME}");
+    var url = "http://services1.arcgis.com/6RDtDcHz3yZdtEVu/arcgis/rest/services/SchweizerKantone/FeatureServer/0";
+    var template = new esri.InfoTemplate("Canton", "Name: ${PROV2NAME}");
     featureLayerCantons = new esri.layers.FeatureLayer(url, {
         id: "cantons",
-        outFields: ["PROVNAME"]
+        outFields: ["PROV2NAME"]
     });
 
     // Renderer for cantons
@@ -540,7 +540,7 @@ function getCantonName(evt) {
     // Build query filter
     query = new esri.tasks.Query();
     query.returnGeometry = true;
-    query.outFields = ["PROVNAME"];
+    query.outFields = ["PROV2NAME"];
 
     //onClick event returns the evt point where the user clicked on the map.
     //This contains the mapPoint (esri.geometry.point) and the screenPoint (pixel xy where the user clicked).
@@ -560,13 +560,13 @@ function showResultCanton(featureSet) {
         var graphic = feature;
         graphic.setSymbol(symbol);
 
-        if (feature.attributes.PROVNAME == questions[questionIndex].name) {
+        if (feature.attributes.PROV2NAME == questions[questionIndex].name) {
             map.infoWindow.setTitle("Richtig!");
-            map.infoWindow.setContent("Das ist in der Tat " + feature.attributes.PROVNAME + "<br/>" + getWikiLink(feature.attributes.PROVNAME, "de"));
+            map.infoWindow.setContent("Das ist in der Tat " + feature.attributes.PROV2NAME + "<br/>" + getWikiLink(feature.attributes.PROVNAME, "de"));
         }
         else {
             map.infoWindow.setTitle("Falsch!");
-            map.infoWindow.setContent("Das ist " + feature.attributes.PROVNAME + " und nicht " + questions[questionIndex].name);
+            map.infoWindow.setContent("Das ist " + feature.attributes.PROV2NAME + " und nicht " + questions[questionIndex].name);
         }
 
         // Add graphic to the map graphics layer.

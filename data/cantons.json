@@ -4,11 +4,11 @@
     "image":"img/Cantons/Kanton_AG.png"
   },
   {
-    "name":"Appenzell Ausser-Rhoden",
+    "name":"Appenzell Ausserrhoden",
     "image":"img/Cantons/Kanton_AR.png"
   },
   {
-    "name":"Appenzell Inner-Rhoden",
+    "name":"Appenzell Innerrhoden",
     "image":"img/Cantons/Kanton_IA.png"
   },
   {
@@ -60,7 +60,7 @@
     "image":"img/Cantons/Kanton_OW.png"
   },
   {
-    "name":"Sankt Gallen",
+    "name":"St. Gallen",
     "image":"img/Cantons/Kanton_SG.png"
   },
   {
@@ -88,12 +88,12 @@
     "image":"img/Cantons/Kanton_UR.png"
   },
   {
-    "name":"Vaud",
-    "image":"img/Cantons/Kanton_VD.png"
-  },
-  {
     "name":"Valais",
     "image":"img/Cantons/Kanton_VS.png"
+  },
+  {
+    "name":"Vaud",
+    "image":"img/Cantons/Kanton_VD.png"
   },
   {
     "name":"Zürich",
