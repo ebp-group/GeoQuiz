@@ -166,8 +166,10 @@ function initFeatureLayerCountries() {
         outFields: ["CNTRY_NAME"]
     });
 
-    //TODO: Später mal testen mit featureLayerCountries.selectFeatures(query, esri.layers.FeatureLayer.SELECTION_NEW);
-    //fl.setSelectionSymbol(new esri.symbol.SimpleFillSymbol().setOutline(null).setColor("#AEC7E3"));
+    // Renderer for country borders
+    var symbolCountryBorder = new esri.symbol.SimpleLineSymbol().setColor(new dojo.Color([189, 57, 57, 1]));
+    var renderer = new esri.renderer.SimpleRenderer(symbolCountryBorder);
+    featureLayerCountries.setRenderer(renderer);
 }
 
 function initFeatureLayerCantons() {
@@ -177,15 +179,28 @@ function initFeatureLayerCantons() {
         id: "cantons",
         outFields: ["PROVNAME"]
     });
+
+    // Renderer for cantons
+    var symbolCantons = new esri.symbol.SimpleFillSymbol(
+          esri.symbol.SimpleFillSymbol.STYLE_SOLID,  
+          new esri.symbol.SimpleLineSymbol(
+            esri.symbol.SimpleLineSymbol.STYLE_SOLID, 
+            new dojo.Color([189,57,57]), 2
+          ),
+          new dojo.Color([189,57,57,0.25])
+        );   
+
+    var renderer = new esri.renderer.SimpleRenderer(symbolCantons);
+    featureLayerCantons.setRenderer(renderer);
 }
 
-function initFindTheCountryQuestion() {
+function initFindTheCountryQuestion(source) {
     reset();
     viewModel.chosenGame("Find the Country");
 
     $("#btnNewQuestion").show();
     $("#btnNewQuestion").click(function () {
-        newFindTheCountryQuestion();
+        newFindTheCountryQuestion(source);
     });
 
     $("#btnShowSolution").show();
@@ -199,16 +214,25 @@ function initFindTheCountryQuestion() {
     }
     else {
         featureLayerCountries.show();
+        featureLayerCountries.refresh();
     }
 
     // Init MarkerSymbol
     symbol = new esri.symbol.SimpleFillSymbol(
     	esri.symbol.SimpleFillSymbol.STYLE_SOLID,
     	new esri.symbol.SimpleLineSymbol(esri.symbol.SimpleLineSymbol.STYLE_SOLID,
-    		new dojo.Color([255, 0, 0]), 2), new dojo.Color([255, 0, 0, 0.5]));
+    		new dojo.Color([51, 132, 42]), 2), new dojo.Color([51, 132, 42, 0.5]));
+
+    var dataSource = "data/countries.json";
+    if (source === "countryList"){
+        dataSource = "data/countries.json";
+    }
+    else if(source === "eurovisionList"){
+        dataSource = "data/eurovision.json";
+    }
 
     // Load the questions-file
-    $.ajax('data/countries.json', {
+    $.ajax(dataSource, {
         async: false,
         dataType: "json",
         success: function (data) {
@@ -223,10 +247,10 @@ function initFindTheCountryQuestion() {
     onClick_connect = dojo.connect(map, 'onClick', getCountryName);
 
     map.setExtent(getInitExtent());
-    newFindTheCountryQuestion();
+    newFindTheCountryQuestion(source);
 }
 
-function newFindTheCountryQuestion() {
+function newFindTheCountryQuestion(source) {
     //TODO: Momentan problematisch wegen featureLayer(hide)
     //resetMap();
     // Daher nur mal das:
@@ -238,7 +262,14 @@ function newFindTheCountryQuestion() {
     var question = questions[questionIndex];
 
     var container = $('#divQuestion');
-    container.html('Where is ' + question.country + '?');
+    var containerContent;
+    if (source === "countryList") {
+        containerContent = "Where is " + question.country + "?";
+    }
+    else if (source === "eurovisionList") {
+        containerContent = "<iframe width=\"220\" height=\"145\" src=\"http://www.youtube.com/embed/" + question.video + "?showinfo=0;controls=0\"></iframe>";
+    }
+    container.html(containerContent);
 }
 
 function showCountry(country) {
@@ -455,7 +486,7 @@ function initFindTheCantonQuestion() {
     //    showCountry(questions[questionIndex].country);
     //});
 
-    if (featureLayerCountries == null) {
+    if (featureLayerCantons == null) {
         initFeatureLayerCantons();
         map.addLayer(featureLayerCantons);
     }
@@ -467,7 +498,7 @@ function initFindTheCantonQuestion() {
     symbol = new esri.symbol.SimpleFillSymbol(
     	esri.symbol.SimpleFillSymbol.STYLE_SOLID,
     	new esri.symbol.SimpleLineSymbol(esri.symbol.SimpleLineSymbol.STYLE_SOLID,
-    		new dojo.Color([255, 0, 0]), 2), new dojo.Color([255, 0, 0, 0.5]));
+    		new dojo.Color([51, 132, 42]), 2), new dojo.Color([51, 132, 42, 0.5]));
 
     // Load the questions-file
     $.ajax('data/cantons.json', {

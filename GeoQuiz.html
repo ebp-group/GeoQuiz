@@ -55,7 +55,6 @@
         }
 
         dojo.ready(init);
-        resetButtons();
     </script>
 </head>
 
@@ -74,6 +73,7 @@
             <br />
             <table>
                 <tr>
+                    <!--<td><button id="btnCheckAnswer" data-bind="style: { visibility: 1===0 ? 'visible' : 'hidden' }">Check Answer</button></td>-->
                     <td><button id="btnCheckAnswer">Check Answer</button></td>
                     <td><button id="btnNewQuestion">Try another one</button></td>
                     <td><button id="btnShowSolution">Show me</button></td>
@@ -93,6 +93,7 @@
                 <input id="gobutton" type="submit" data-bind="click:btnGuessTheGeomorphClicked" value="Guess the Geomorph" />
                 <input id="gobutton" type="submit" data-bind="click:btnFindTheCantonClicked" value="Find the Canton" />
                 <input id="gobutton" type="submit" data-bind="click:btnLocateThePeakClicked" value="Locate the Peak" />
+                <input id="gobutton" type="submit" data-bind="click:btnFindTheEurovisionCountryClicked" value="Eurovision" />
             </div>
         </div>
     </div>
@@ -103,12 +104,14 @@
             "chosenGame": ko.observable("Choose a Game"),
             "btnGuessTheCityClicked": function () { initGuessCityOnMapQuestion(); },
             "btnLocateTheCityClicked": function () { initPointOnMapQuestion(); },
-            "btnFindTheCountryClicked": function () { initFindTheCountryQuestion(); },
+            "btnFindTheCountryClicked": function () { initFindTheCountryQuestion("countryList"); },
             "btnGuessTheGeomorphClicked": function () { initGuessGeomorphOnMapQuestion(); },
             "btnFindTheCantonClicked": function () { initFindTheCantonQuestion(); },
-            "btnLocateThePeakClicked": function () { initLocateThePeakQuestion(); }
+            "btnLocateThePeakClicked": function () { initLocateThePeakQuestion(); },
+            "btnFindTheEurovisionCountryClicked": function () { initFindTheCountryQuestion("eurovisionList"); }
         }
         ko.applyBindings(viewModel);
+        //resetButtons();
     </script>
 </body>
 </html>
