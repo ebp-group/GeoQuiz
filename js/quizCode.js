@@ -562,7 +562,7 @@ function showResultCanton(featureSet) {
 
         if (feature.attributes.PROV2NAME == questions[questionIndex].name) {
             map.infoWindow.setTitle("Richtig!");
-            map.infoWindow.setContent("Das ist in der Tat " + feature.attributes.PROV2NAME + "<br/>" + getWikiLink(feature.attributes.PROVNAME, "de"));
+            map.infoWindow.setContent("Das ist in der Tat " + feature.attributes.PROV2NAME + "<br/>" + getWikiLink(feature.attributes.PROV2NAME, "de"));
         }
         else {
             map.infoWindow.setTitle("Falsch!");
