@@ -6,7 +6,7 @@
     "zoom":18
   },
   {
-    "name":"Steingletscher",
+    "name":"Blockgletscher",
     "lon":9.07,
     "lat":46.581,
     "zoom":16
@@ -108,19 +108,19 @@
     "zoom":18
   },
   {
-    "name":"Steingletscher",
+    "name":"Blockgletscher",
     "lon":10.034,
     "lat":46.52,
     "zoom":16
   },
   {
-    "name":"Kuhtreppen",
+    "name":"Kuhwege",
     "lon":9.148,
     "lat":47.047,
     "zoom":18
   },
   {
-    "name":"Fossiler Steingletscher",
+    "name":"Fossiler Blockgletscher",
     "lon":9.745,
     "lat":46.385,
     "zoom":18
