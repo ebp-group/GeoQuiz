@@ -384,6 +384,7 @@ function showResults(featureSet) {
     });
 }
 
+// GAME: Geomorph
 function initGuessGeomorphOnMapQuestion() {
     reset();
     viewModel.chosenGame("Guess the Geomorphological Form");
@@ -481,11 +482,6 @@ function initFindTheCantonQuestion() {
         newFindTheCantonQuestion();
     });
 
-    //$("#btnShowSolution").show();
-    //$("#btnShowSolution").click(function () {
-    //    showCountry(questions[questionIndex].country);
-    //});
-
     if (featureLayerCantons == null) {
         initFeatureLayerCantons();
         map.addLayer(featureLayerCantons);
@@ -561,11 +557,11 @@ function showResultCanton(featureSet) {
         graphic.setSymbol(symbol);
 
         if (feature.attributes.PROV2NAME == questions[questionIndex].name) {
-            map.infoWindow.setTitle("Richtig!");
-            map.infoWindow.setContent("Das ist in der Tat " + feature.attributes.PROV2NAME + "<br/>" + getWikiLink(feature.attributes.PROV2NAME, "de"));
+            map.infoWindow.setTitle("<span style='color:green'>Richtig!</span>");
+            map.infoWindow.setContent("Das ist " + feature.attributes.PROV2NAME + "<br/>" + getWikiLink(feature.attributes.PROV2NAME, "de"));
         }
         else {
-            map.infoWindow.setTitle("Falsch!");
+            map.infoWindow.setTitle("<span style='color:red'>Falsch!</span>");
             map.infoWindow.setContent("Das ist " + feature.attributes.PROV2NAME + " und nicht " + questions[questionIndex].name);
         }
 

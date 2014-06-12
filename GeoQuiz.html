@@ -28,7 +28,8 @@
         dojo.require("dijit.layout.BorderContainer");
         dojo.require("dijit.layout.ContentPane");
         dojo.require("dijit.layout.TabContainer");
-
+        dojo.require("esri.dijit.InfoWindowLite");
+        
         var map;
         var esriImagery, esriImageryWorld2D;
 
@@ -52,6 +53,12 @@
             map.addLayer(esriImagery);
 
             esriImageryWorld2D = initLayer("http://server.arcgisonline.com/ArcGIS/rest/services/ESRI_Imagery_World_2D/MapServer", "esriImageryWorld2D");
+
+            // InfoWindow
+            var infoWindowLite = new esri.dijit.InfoWindowLite(null, dojo.create("div", null, map.root));
+            infoWindowLite.startup();
+            map.setInfoWindow(infoWindowLite);
+            map.infoWindow.resize(250, 100);
         }
 
         dojo.ready(init);
