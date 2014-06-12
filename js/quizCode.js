@@ -559,6 +559,7 @@ function showResultCanton(featureSet) {
         if (feature.attributes.PROV2NAME == questions[questionIndex].name) {
             map.infoWindow.setTitle("<span style='color:green'>Richtig!</span>");
             map.infoWindow.setContent("Das ist " + feature.attributes.PROV2NAME + "<br/>" + getWikiLink(feature.attributes.PROV2NAME, "de"));
+            showPointsAnimation();
         }
         else {
             map.infoWindow.setTitle("<span style='color:red'>Falsch!</span>");

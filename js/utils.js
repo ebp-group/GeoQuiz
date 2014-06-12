@@ -25,3 +25,8 @@ function getWikiLink(wikiTopic, lang) {
 
     return hrefWikipedia;
 }
+
+function showPointsAnimation() {
+    var paper = Raphael(0, 400, 450, 450);
+    paper.text(150, 150, "+100").attr({ font: "50px Helvetica", fill: "#fff" }).animate({ transform: "s2.5" }, 1000, "backOut", function(){paper.clear();});
+}
